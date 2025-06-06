@@ -31,34 +31,34 @@ Outcome: A refined dataset optimized for predictive modeling, ensuring maximum m
 
 We trained and evaluated three models for churn prediction:
 1. Logistic Regression:
-✔ Provides baseline insights, but struggled with recall (71%), leading to many missed churners.
-✔ Accuracy: 78% | Precision: 40% | F1-score: 51%
+- Provides baseline insights, but struggled with recall (71%), leading to many missed churners.
+- Accuracy: 78% | Precision: 40% | F1-score: 51%
 2. Random Forest:
-✔ Strong balance between recall & precision but missed some churn cases.
-✔ Accuracy: 92% | Precision: 83% | F1-score: 74%
+- Strong balance between recall & precision but missed some churn cases.
+- Accuracy: 92% | Precision: 83% | F1-score: 74%
 3. XGBoost (Best Model):
-✔ Highest recall (81%), ensuring minimal false negatives (missed churners).
-✔ Best F1-score (86%), demonstrating excellent model balance.
-✔ Highest accuracy (96%), proving superior churn prediction capability.
+- Highest recall (81%), ensuring minimal false negatives (missed churners).
+- Best F1-score (86%), demonstrating excellent model balance.
+- Highest accuracy (96%), proving superior churn prediction capability.
 
 Outcome: XGBoost was identified as the best-performing model for predicting churn, outperforming others significantly in recall, precision, and overall prediction stability.
 
 **Fine-Tuning & Threshold Adjustment**
 
 To improve model effectiveness, we optimized hyperparameters using Grid Search CV and adjusted classification thresholds to increase recall while maintaining precision:
-✔ Fine-tuned XGBoost model with optimized parameters (learning_rate=0.1, max_depth=7, n_estimators=100, scale_pos_weight=3).
-✔ Threshold adjusted to 0.443, allowing the model to capture more churners without excessive false positives.
-✔ Visualized Precision-Recall trade-offs, helping determine the best classification balance for retention efforts.
+- Fine-tuned XGBoost model with optimized parameters (learning_rate=0.1, max_depth=7, n_estimators=100, scale_pos_weight=3).
+- Threshold adjusted to 0.443, allowing the model to capture more churners without excessive false positives.
+- Visualized Precision-Recall trade-offs, helping determine the best classification balance for retention efforts.
 
 Outcome: The optimized XGBoost model effectively flags high-risk churn customers, ensuring proactive intervention while minimizing false alarms.
 
 **Business Implications**
 
 The model identified key drivers of churn, providing valuable insights for business decision-making:
-✔ Customer service quality—Customers with frequent service complaints were more likely to churn.
-✔ Pricing dissatisfaction—Higher pricing led to increased customer attrition.
-✔ Competitor influence—Users frequently making international calls were prone to switching due to better market alternatives.
-✔ Usage behavior—Customers with low engagement in voicemail and premium features showed churn tendencies.
+- Customer service quality—Customers with frequent service complaints were more likely to churn.
+- Pricing dissatisfaction—Higher pricing led to increased customer attrition.
+- Competitor influence—Users frequently making international calls were prone to switching due to better market alternatives.
+- Usage behavior—Customers with low engagement in voicemail and premium features showed churn tendencies.
 
 Outcome: These findings support strategic improvements in pricing models, customer service enhancements, and personalized retention strategies.
 
@@ -96,4 +96,4 @@ Next Steps:
 - Monitor prediction effectiveness and refine strategies using fresh data.
 - Enhance customer engagement programs based on model-driven insights.
 
-This Notebook serves as a powerful tool for predictive churn prevention, ensuring data-driven decision-making for enhanced customer retention strategies.
+This Notebook serves as a tool for predictive churn prevention, ensuring data-driven decision-making for enhanced customer retention strategies.
